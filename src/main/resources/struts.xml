@@ -15,18 +15,23 @@
 		<action name="index">
 			<result>/index.jsp</result>
 		</action>
+
+		<!--if the URL is message.action then call the execute method of class Message.-->
+		<action name="message" class="org.apache.struts.helloworld.action.HelloWorldAction" method="testMessage">
+			<result name="success">/message.jsp</result>
+		</action>
 		
-		<!-- If the URL is hello.action then call the execute method of class HelloWorldAction.
-		If the result returned by the execute method is success render the HelloWorld.jsp -->
-		<action name="hello" class="org.apache.struts.helloworld.action.HelloWorldAction" method="execute">
-			<result name="success">/HelloWorld.jsp</result>
+		<action name="testButton">
+			<result name="success">/testButton.jsp</result>
 		</action>
-
-		<!--if the URL is test.action then call the execute method of class TestAction.-->
-		<action name="gfy" class="org.apache.struts.helloworld.action.HelloWorldAction" method="execute2">
-			<result name="success">/HelloWorld.jsp</result>
+		
+		<action name="testButtonClicked" class="org.apache.struts.helloworld.action.HelloWorldAction" method="testButtonClicked">
+			<result name="success">/testButtonClicked.jsp</result>
 		</action>
-
+		
+		<action name="dbConnect" class="org.apache.struts.helloworld.action.HelloWorldAction" method="dbConnect">
+			<result name="success">/index.jsp</result>
+		</action>
 
 	</package>
 

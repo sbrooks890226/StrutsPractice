@@ -20,6 +20,20 @@
     <description>Hello world example application for the Struts 2 Getting Started tutorials</description>
 
     <dependencies>
+    
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.6</version>
+		</dependency>
+    
+	    <dependency>     
+		    <groupId>javax.servlet</groupId>     
+		    <artifactId>javax.servlet-api</artifactId>     
+		    <version>3.0.1</version>     
+		    <scope>provided</scope> 
+	    </dependency>
 
         <dependency>
             <groupId>org.apache.struts</groupId>

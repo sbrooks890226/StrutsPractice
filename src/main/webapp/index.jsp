@@ -4,10 +4,15 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Basic Struts 2 Application - Welcome</title>
+    <title>Index.action page</title>
   </head>
   <body>
-    <h1>EAt Shit Dpug!</h1>
-    <p><a href="<s:url action='gfy'/>">Hello World</a></p>
-  </body>
+    <h1>Index.action Page</h1>
+    <select onchange="location = this.value;"> 
+    	<option value="<s:url action='index'/>">Index Page</option>
+    	<option value="<s:url action='testButton'/>">Test Button Page</option>
+    	<option value="<s:url action='message'/>">Message Page</option>
+	</select>
+	<br><br>
+	<h2><s:property value="messageStore.message" /></h2>
 </html>

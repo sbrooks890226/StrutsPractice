@@ -4,11 +4,11 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Hello World!</title>
+    <title>Message.action Page</title>
   </head>
   <body>
+    <h1>Message.action Page</h1>
+    <br><br>
     <h2><s:property value="messageStore.message" /></h2>
-    <a href="https=<s:url action='button1'/>"> <button type="button" name="button1">DO IT!</button></a>
-    <a href="https://www.google.com/maps/embed/v1/place?key=AIzaSyBhH2iON2h-PR3w7No67Z6FxGlnRurdikY&parameters"</a>
   </body>
 </html>
