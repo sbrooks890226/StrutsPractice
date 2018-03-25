@@ -17,3 +17,6 @@ In a web browser go to:  http://localhost:8080/hello-world/index.action.
 
 You should see a web page with Welcome to Struts 2!
 
+
+TEST
+
