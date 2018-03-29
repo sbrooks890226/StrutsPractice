@@ -37,6 +37,10 @@
 			<result name="success">/word.jsp</result>
 		</action>
 
+		<action name="getWords" class="org.apache.struts.helloworld.action.WordAction" method="getAll">
+			<result name="success">/words.jsp</result>
+		</action>
+
 	</package>
 
 </struts>
