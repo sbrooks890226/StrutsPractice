@@ -2,7 +2,9 @@
 
 To build
 
-`mvn jetty run`
+```bash
+DB_CONN=jdbc:mysql://<IP>/<Database Name> DB_USER=<Username> DB_PASS=<Password> mvn jetty:run
+```
 
 Visit
 

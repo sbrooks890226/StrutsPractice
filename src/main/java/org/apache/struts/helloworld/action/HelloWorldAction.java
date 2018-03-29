@@ -45,21 +45,18 @@ public class HelloWorldAction extends ActionSupport {
     	return SUCCESS;
     }
     
-    public MessageStore getMessageStore() {
-        return messageStore;
-    }
+
     
     public String dbConnect() throws Exception  {
     	String driver = "com.mysql.jdbc.Driver";
-        String connection;
-        String user;
-        String password;
+        String connection = System.getenv("DB_CONN");
+        String user = System.getenv("DB_USER");
+        String password = System.getenv("DB_PASS");
         String qwerty;
         ResultSet resultSet = null;
         Statement statement = null;
         messageStore = new MessageStore();
-        
-        
+
         Class.forName(driver);
         Connection con = DriverManager.getConnection(connection, user, password);
         statement = con.createStatement();
@@ -71,6 +68,10 @@ public class HelloWorldAction extends ActionSupport {
           con.close();
         }
         return SUCCESS;
+    }
+
+    public MessageStore getMessageStore() {
+        return messageStore;
     }
 }
 

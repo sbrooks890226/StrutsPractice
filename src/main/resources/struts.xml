@@ -28,9 +28,13 @@
 		<action name="testButtonClicked" class="org.apache.struts.helloworld.action.HelloWorldAction" method="testButtonClicked">
 			<result name="success">/testButtonClicked.jsp</result>
 		</action>
-		
+
 		<action name="dbConnect" class="org.apache.struts.helloworld.action.HelloWorldAction" method="dbConnect">
 			<result name="success">/index.jsp</result>
+		</action>
+
+		<action name="getWord" class="org.apache.struts.helloworld.action.WordAction" method="get">
+			<result name="success">/word.jsp</result>
 		</action>
 
 	</package>
