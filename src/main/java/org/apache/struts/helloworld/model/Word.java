@@ -36,6 +36,11 @@ public class Word {
         this.wordValue = resultSet.getString(2);
     }
 
+    public Word(String id, String value){
+        this.wordId = id;
+        this.wordValue = value;
+    }
+
     public String getWordId() {
         return this.wordId;
     }
