@@ -9,19 +9,22 @@ import java.util.ArrayList;
 public class WordAction extends ActionSupport {
 
     private static final long serialVersionUID = 1L;
-    private String id;
+    private int id;
 
     private Word word;
     private Words words;
 
     // helpers for request arguments
-    public void setId(String id){
+    public void setId(int id){
         this.id = id;
     }
 
     // these should all be routes
-    public String create() throws Exception  {
-        throw new NotImplementedException();
+    public String add() throws Exception  {
+        Word w = new Word();
+        w.setWordValue("asdf");
+        w.save();
+        return SUCCESS;
     }
 
     public String get() throws Exception  {

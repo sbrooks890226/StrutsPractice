@@ -13,10 +13,20 @@ public class Word {
 
     Connection con;
 
-    String wordId;
+    int wordId;
     String wordValue;
 
-    public Word(String id) throws Exception{
+    public Word() throws Exception{
+    	Class.forName("com.mysql.jdbc.Driver");
+
+        this.con = DriverManager.getConnection(
+                System.getenv("DB_CONN"),
+                System.getenv("DB_USER"),
+                System.getenv("DB_PASS")
+        );  	
+    }
+    
+    public Word(int id) throws Exception{
         Class.forName("com.mysql.jdbc.Driver");
 
         this.con = DriverManager.getConnection(
@@ -32,21 +42,41 @@ public class Word {
         resultSet.next();
 
         // set up our object from the database
-        this.wordId = resultSet.getString(1);
+        this.wordId = resultSet.getInt(1);
         this.wordValue = resultSet.getString(2);
     }
 
-    public Word(String id, String value){
+    public Word(int id, String value){
         this.wordId = id;
         this.wordValue = value;
     }
+    
 
-    public String getWordId() {
+    public int getWordId() {
         return this.wordId;
     }
 
     public String getWordValue(){
         return this.wordValue;
     }
+    
+    public void setWordId(int wordId) {
+    	this.wordId = wordId;  
+    }
+    
+    public void setWordValue(String wordValue) {
+    	this.wordValue = wordValue;
+    }
+    
+    public void save() throws Exception {
+    	String qwerty = "INSERT INTO `TestTable` (`word`) VALUES ('" + wordValue + "')";
+    	System.out.println(qwerty);
+    	Statement statement = this.con.createStatement();
+        statement.executeUpdate(qwerty);
+    }
+    
+    
+    
+    
 }
 

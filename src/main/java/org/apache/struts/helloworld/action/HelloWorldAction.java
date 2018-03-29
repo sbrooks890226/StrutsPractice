@@ -41,11 +41,9 @@ public class HelloWorldAction extends ActionSupport {
     
     public String testButtonClicked() {
     	messageStore = new MessageStore();
-        messageStore.setMessage("Test Success!!! message stored in testButtonClicked method");
+        messageStore.setMessage("Test Button Clicked");
     	return SUCCESS;
     }
-    
-
     
     public String dbConnect() throws Exception  {
     	String driver = "com.mysql.jdbc.Driver";

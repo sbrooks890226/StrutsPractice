@@ -8,10 +8,12 @@
   </head>
   <body>
     <h1>Index.action Page</h1>
+    <h2>Select a Page:</h2>
     <select onchange="location = this.value;"> 
     	<option value="<s:url action='index'/>">Index Page</option>
     	<option value="<s:url action='testButton'/>">Test Button Page</option>
     	<option value="<s:url action='message'/>">Message Page</option>
+    	<option value="<s:url action='getWords'/>">Get Words Page</option>
 	</select>
 	<br><br>
 	<h2><s:property value="messageStore.message" /></h2>

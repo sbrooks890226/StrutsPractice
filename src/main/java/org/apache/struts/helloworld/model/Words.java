@@ -53,7 +53,7 @@ public class Words {
         while (resultSet.next()) {
             this.words.add(
                 new Word(
-                    resultSet.getString("id"),
+                    resultSet.getInt("id"),
                     resultSet.getString("word")
                 )
             );
